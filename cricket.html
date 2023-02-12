@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket in Css</title>
+    <style>
+        h1{
+            text-align: center;
+            color: green;
+        }
+        .field{
+            border: 1px solid;
+        }
+        .field:hover .bat{
+            transform: rotate(-60deg);
+            transform-origin: top right;
+        }
+        .bat{
+            transition: transform .2s ease-in;
+        }
+        .ball{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            position: relative;
+            left: 694px;
+            transition: transform .5s ease-out .3s;
+        }
+        .field:hover .ball{
+            transform: translate(772px ,-100px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Cricket Bat hit Ball with animation</h1>
+    <div class="field">
+        <img class="bat" src="images/cricket-bat.png" alt="cricket-bat">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
